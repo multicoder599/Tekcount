@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
     name: { type: String, required: true },
+    barcode: { type: String, unique: true, sparse: true },
     type: { type: String, default: 'others' },
     price: { type: Number, default: 0 },
     buying_price: { type: Number, default: 0 },
